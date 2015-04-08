@@ -5,9 +5,9 @@
   This example code is in the public domain
 */
 
-// Connect the anode of the LED to pin 13, assign pin 13 to variable led
+// Connect the anode of the LED to pin 12, assign pin 12 to variable led
 // Connect the cathode of the LED to GND
-int led = 13;
+int led = 12;
 
 // The setup routine runs once when you press the reset button
 void setup() {
@@ -18,7 +18,7 @@ void setup() {
 // The loop will repeat indefinately
 void loop() {
   digitalWrite(led, HIGH); // Turn the led on, HIGH = 5V 
-  delay(500); // Wait time
+  delay(300); // Wait time
   digitalWrite(led, LOW); // Turn the led off, LOW = 0V
-  delay(500); // Wait time
+  delay(300); // Wait time
 }
