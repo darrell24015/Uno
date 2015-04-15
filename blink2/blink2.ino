@@ -7,6 +7,8 @@
 // Connect the red LED to pin 10 and the green LED to pin 12
 int red = 10;
 int green = 12;
+int wait1 = 100;
+int wait2 = 50;
 
 // The setup routine runs each time you press the reset button
 void setup() {
@@ -18,12 +20,12 @@ void setup() {
 void loop() {
   // Turn the LED lights on with HIGH, change the wait time as desired
   digitalWrite(red, HIGH);
-  delay(200);
+  delay(wait1);
   digitalWrite(green, HIGH);
-  delay(200);
+  delay(wait1);
   digitalWrite(red, LOW);
-  delay(100);
+  delay(wait2);
   digitalWrite(green, LOW);
-  delay(100);
+  delay(wait2);
 
 }
