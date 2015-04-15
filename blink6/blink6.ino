@@ -23,12 +23,14 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly
-  // turn the lights on in order
-  for (counter=0; counter < 6; counter++) {
-    digitalWrite(ledArray[counter], HIGH);
-    delay(timer);
-    digitalWrite(ledArray[counter], LOW);
-    delay(timer);
+  // turn the lights on in order 2 times
+  for (countDown=2; countDown > 0; countDown--) {
+     for (counter=0; counter < 6; counter++) {
+       digitalWrite(ledArray[counter], HIGH);
+       delay(timer);
+       digitalWrite(ledArray[counter], LOW);
+       delay(timer);
+     }
   }
   // flash all lights 4 times
   for (countDown=4; countDown > 0; countDown--) {
