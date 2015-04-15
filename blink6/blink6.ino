@@ -1,10 +1,14 @@
 /*
  blink6
+ ---------------------------------------------
  Turns on six LED lights in a specific pattern
+ @author Darrell Little
  This example code is in the public domain
+ ---------------------------------------------
 */
 // set up array and variables
 // each led is assigned a pin number in the array
+// change the order of the array for a different pattern
 int ledArray[] = {9,10,11,3,5,8};
 int counter = 0;
 int countDown = 0;
@@ -37,6 +41,7 @@ void loop() {
     }
       delay(timer);
   }
+    // wait a short time before repeating cycle
     delay(300);
 }
 
