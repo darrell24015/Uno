@@ -17,4 +17,4 @@ This library is for [WiFi Shield](http://www.seeedstudio.com/depot/wifi-shield-p
 
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/WiFi_Shield)](https://github.com/igrigorik/ga-beacon)
+# [![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/WiFi_Shield)](https://github.com/igrigorik/ga-beacon)
