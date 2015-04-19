@@ -13,8 +13,3 @@ This library is for [WiFi Shield](http://www.seeedstudio.com/depot/wifi-shield-p
 + setup WiFi AP
 + join Ad-Hoc network
 + UDP communication
-
-
-
-
-# [![Analytics](https://ga-beacon.appspot.com/UA-46589105-3/WiFi_Shield)](https://github.com/igrigorik/ga-beacon)
