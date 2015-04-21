@@ -40,6 +40,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  
   // if there is data available from the shield
   while (wifly.available()) {
     Serial.write(wifly.read()); // display the data in the serial monitor window
