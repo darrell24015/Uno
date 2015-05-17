@@ -7,7 +7,7 @@
 
 // Connect the anode of the LED to pin 12, assign pin 12 to variable led
 // Connect the cathode of the LED to GND
-int led = 12;
+int led = 13;
 
 // The setup routine runs once when you press the reset button
 void setup() {
