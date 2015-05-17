@@ -121,7 +121,7 @@ void loop() {
   Serial.println(" *F\t");
 
    if ((save_value(humiS)) == 0) {
-   Serial.println("Data sent to Ubidots.com");
+   Serial.println("Data successfully sent to Ubidots.com");
   } else {
     char r;
     while (wifly.receive((uint8_t *)&r, 1, 1000) == 1)
@@ -133,10 +133,11 @@ void loop() {
   digitalWrite(led, LOW); // Turn the led off
   
   // Wait 15 minutes between measurements
-  //delay(900000);
+  Serial.println("---------- Wait 15 minutes for next measurement ----------");
+  delay(900000);
   // Wait 30 seconds between measurements
-  Serial.println("---------- Waiting for next measurement ----------");
-  delay(30000);
+  // Serial.println("---------- Waiting 30 seconds for next measurement ----------");
+  // delay(30000);
 }
 
   // Function for Ubidots API
@@ -154,7 +155,7 @@ void loop() {
   }
 
   // Send request
-  char buf[200];
+  char buf[400];
   //dont forget change your id and your token
   snprintf(buf, sizeof(buf), "POST /api/v1.6/variables/55443559762542161bf77cb3/values HTTP/1.1\r\nContent-Type: application/json\r\nContent-Length: %d\r\nX-Auth-Token: MwfUgzsePHX23qkwzobofEh6OcIs97\r\nHost: things.ubidots.com\r\n\r\n",strlen(post_data_buf));
   wifly.send(buf);
