@@ -1,6 +1,6 @@
 /*
 This sketch is based on the original wifly_http example provided by
-SeeedStudio.  This test should send a value of 40 to Ubidots using 
+SeeedStudio.  This test should send a static value to Ubidots using 
 the short token created in my Ubidots profile
 */
 
@@ -16,8 +16,8 @@ the short token created in my Ubidots profile
 #define TemperatureID "554456c77625423c665ab445" //Replace with your variable ID
 */
 
-#define HTTP_POST_URL "http://things.ubidots.com/api/v1.6/variables/55443559762542161bf77cb3/values?token=55443559762542161bf77cb3"
-#define HTTP_POST_DATA "{\"value\":40}"
+#define HTTP_POST_URL "http://things.ubidots.com/api/v1.6/variables/55443559762542161bf77cb3/values?token=MwfUgzsePHX23qkwzobofEh6OcIs97"
+#define HTTP_POST_DATA "{\"value\":45}"
 
 // WiFi configuration
 #define AUTH WIFLY_AUTH_WPA2_PSK
