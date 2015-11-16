@@ -718,8 +718,9 @@ void loop()
   {
     drawPaddle();
 
-    //Pause game if FIRE pressed
-    pad = arduboy.pressed(B_BUTTON);
+    //Pause game if A button pressed
+    // 11/15/2015 - Changed to A_BUTTON
+    pad = arduboy.pressed(A_BUTTON);
 
     if(pad >1 && oldpad==0 && released)
     {
