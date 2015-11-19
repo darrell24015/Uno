@@ -8,8 +8,18 @@
  License as published by the Free Software Foundation; either
  version 2.1 of the License, or (at your option) any later version.
  */
+ 
+ /*
+  * 11/19/2015
+  * Modifications to game by Darrell Little
+  * Fire Button changed to A_BUTTON (B_BUTTON for
+  * pause still does not work).
+  * Increase game play to 9 lives, display the 
+  * remaining lives. 
+  */
 
 #include <SPI.h>
+
 #include "Arduboy.h"
 
 #include <EEPROM.h>
@@ -235,7 +245,7 @@ void moveBall()
     xb=xPaddle + 5;
 
     //Release ball if FIRE pressed
-    pad3 = arduboy.pressed(B_BUTTON);
+    pad3 = arduboy.pressed(A_BUTTON);
     if (pad3 == 1 && oldpad3 == 0)
     {
       released=true;
@@ -322,7 +332,7 @@ void pause()
   {
     delay(150);
     //Unpause if FIRE is pressed
-    pad2 = arduboy.pressed(B_BUTTON);
+    pad2 = arduboy.pressed(A_BUTTON);
     if (pad2 > 1 && oldpad2 == 0 && released)
     {
         arduboy.fillRect(52, 45, 30, 11, 0);
@@ -382,7 +392,7 @@ boolean pollFireButton(int n)
   for(int i = 0; i < n; i++)
   {
     delay(15);
-    pad = arduboy.pressed(B_BUTTON);
+    pad = arduboy.pressed(A_BUTTON);
     if(pad == 1 && oldpad == 0)
     {
       oldpad3 = 1; //Forces pad loop 3 to run once
@@ -589,7 +599,7 @@ void enterInitials()
       }
     }
 
-    if (arduboy.pressed(B_BUTTON))
+    if (arduboy.pressed(A_BUTTON))
     {
       if (index < 2)
       {
@@ -719,8 +729,8 @@ void loop()
     drawPaddle();
 
     //Pause game if A button pressed
-    // 11/15/2015 - Changed to A_BUTTON
-    pad = arduboy.pressed(A_BUTTON);
+    // 11/19/2015 - Changed to B_BUTTON
+    pad = arduboy.pressed(B_BUTTON);
 
     if(pad >1 && oldpad==0 && released)
     {
