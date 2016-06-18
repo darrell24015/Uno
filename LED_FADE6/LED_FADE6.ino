@@ -1,4 +1,4 @@
-int led[] = {3,10,11,5,9,6};
+int led[] = {6, 9, 10, 11};
 
 void setup() {
   // put your setup code here, to run once:
