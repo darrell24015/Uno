@@ -13,7 +13,7 @@ int randomLED;
 
 void setup() {
   // put your setup code here, to run once:
-  // Use reading on Analog pin 0 for a randon seed
+  // Use reading on Analog pin 0 for a random seed
   randomSeed(analogRead(0));
   // Initialize each pin in array to Output and Low (off)
   for (int x=0; x<4; x++) {
