@@ -7,7 +7,7 @@
 
 // Connect the anode of the LED to a pin, assign that pin number to variable led
 // Connect the cathode of the LED to GND with a resistor inline
-int led = 11;
+int led = 13;
 // Create array with the times to wait between blinks
 int waitArray[] = {50,100,300};
 int wait = 0;
